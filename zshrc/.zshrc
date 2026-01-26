@@ -11,7 +11,6 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh-themes/jole-theme.omp.json)"
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -74,6 +73,6 @@ fzp() {
 fzf --preview "bat --style=numbers --color=always --line-range :500 {}"
 }
 
-export PATH="$PATH:/home/jole/.local/bin"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-
+prompt off
+eval "$(starship init zsh)"
